@@ -20,5 +20,20 @@
 - Go to **ADD A GAME** > **Add a Non-Steam Game**
 - Choose the Zadanie Testowe Programista coop.exe.  
 - Choose *Lobbies* then *Host Lobby*
-- You can either add friend through steam to play *(Shift + tab)* or another person can find your lobby using filter *(Lobby name will be <Hostnamefromsteam>'Lobby)*
+- You can either add friend through steam to play *(Shift + tab)* or another person can find your lobby using filter *(Lobby name will be <Hostnamefromsteam>'Lobby)*.  
   
+## Game Goal
+- Players defend of enemy robots that spawn every fixed timer.
+- Killing a robot rewards a player with 1 point.
+- Whoever gets more points by the time ends or gets amount of points required to win the game wins.
+  
+## Controls
+- Use WASD to move your character. Your character will move regarding which way he is facing. Character always faces your cursor position.
+- Hold or click left mouse button to shoot.
+- Press tab to check scoreboard.
+  
+## Implementations
+- Owner can choose game settings after hosting lobby. **Game Duration** or **Score Goal** if it is being tested throught **Unity** these settings can be set from inspector
+- Whole project uses global game timer, based on tick. Which means time between shots or AI calculations rely on global timer. For example AI makes calculation which target to choose every 12 ticks, if the global timer is set to 4 ticks per second AI will reconsider its actions every 3 seconds.
+- After lobby starts players are asked to ready up, once players are ready the countdown will start which can be stopped at any time.
+- Once the round is over, players can ready up and the game will restart.
